@@ -20,7 +20,13 @@ public class Practica1 : MonoBehaviour
         PrintArrayInt(result2);
     }
 
-    // Update is called once per frame
+    /* El orden de complejidad es cuadratica O(n^2)
+    ya que se tienen dos for anidados y los dos son 
+    del mismo tamaño n.
+    La operacion puede considerarse como 3n+3 considerando
+    Que los dos ifs se cumplan y tomando en cuenta las 
+    3 declaraciones de variables.
+    */
     private int[] NumbersLessThan(int[] nums)
     {
         int[] aux = new int[nums.Length];
@@ -49,11 +55,11 @@ public class Practica1 : MonoBehaviour
         {
             str += nums[i];
 
-            if((i + 1) == nums.Length)
-                str += "]";
-            else
+            if((i + 1) != nums.Length)
                 str += ", ";
         }
+
+        str += "]";
 
         Debug.Log(str);
     }
