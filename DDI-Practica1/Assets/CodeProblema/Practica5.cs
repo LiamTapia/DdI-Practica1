@@ -18,6 +18,9 @@ public class Practica5 : MonoBehaviour
         Debug.Log(singleNumArray(nums2));
     }
 
+    /*Debido al uso de un metodo de ordenamiento el tiempo que se 
+    necesitará es de O(nlogn), mientras que por el mismo Quicksort
+    tiene una complejidad de espacio de O(logn).*/
     int parDigitArray(int[] nums)
     {
         int i = 0, aux = 10, counter = 0;
@@ -43,6 +46,9 @@ public class Practica5 : MonoBehaviour
         return counter;
     }
 
+    /*Debido al uso de un metodo de ordenamiento el tiempo que se 
+    necesitará es de O(nlogn), mientras que por el mismo Quicksort
+    tiene una complejidad de espacio de O(logn).*/
     int singleNumArray(int[] nums)
     {
         int i, j, aux;

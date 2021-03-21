@@ -17,9 +17,10 @@ public class HeartController : MonoBehaviour
 
         for(int i = 0; i < currentLife; i++)
         {
-            
             GameObject childHeart = Instantiate(heartPrefab) as GameObject; 
-            childHeart.transform.SetParent(GameObject.Find("HeartContainer").transform);
+            childHeart.transform.SetParent(GameObject.Find("HeartContainer").transform,false);
+           //this.transform.SetParent(obj.transform, false);
+
         }
     }
 
@@ -32,7 +33,7 @@ public class HeartController : MonoBehaviour
         for(int i = 0; i < currentLife; i++)
         {
             GameObject childHeart = Instantiate(heartPrefab) as GameObject; 
-            childHeart.transform.SetParent(GameObject.Find("HeartContainer").transform);
+            childHeart.transform.SetParent(GameObject.Find("HeartContainer").transform,false);
         }
     }
 

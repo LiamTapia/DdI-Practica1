@@ -1,15 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
+//using UnityEngine.UI;
 
 public class Interactable : MonoBehaviour
 {
     public bool isInsideZone = false;
     public KeyCode interactionKey = KeyCode.P;
+    public string interactionButton = "Interact";
+    //public GameObject ActionButton;
 
     public virtual void Update() 
     {
-        if(isInsideZone && Input.GetKeyDown(interactionKey))
+
+        //if(isInsideZone && Input.GetKeyDown(interactionKey))
+        if(isInsideZone && CrossPlatformInputManager.GetButtonDown(interactionButton))
         {
             Debug.Log("Tecla presionada");
             Interact();
@@ -23,6 +29,7 @@ public class Interactable : MonoBehaviour
         {
             Debug.Log("Entro en el area de interaccion");
             isInsideZone = true;
+            //ActionButton.setActive(true);
         }
             
         return;
@@ -34,6 +41,7 @@ public class Interactable : MonoBehaviour
         {
             Debug.Log("Salio del area de interaccion");
             isInsideZone = false;
+            //ActionButton.enabled = false;
         }
             
         return;

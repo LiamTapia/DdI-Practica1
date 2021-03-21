@@ -35,10 +35,11 @@ namespace UnityStandardAssets.CrossPlatformInput
             // check if we already have an axis with that name and log and error if we do
             if (m_VirtualAxes.ContainsKey(axis.name))
             {
-                Debug.LogError("There is already a virtual axis named " + axis.name + " registered.");
+                m_VirtualAxes.Remove(axis.name);
+                //Debug.LogError("There is already a virtual axis named " + axis.name + " registered.");
             }
-            else
-            {
+            //else
+            //{
                 // add any new axes
                 m_VirtualAxes.Add(axis.name, axis);
 
@@ -47,7 +48,7 @@ namespace UnityStandardAssets.CrossPlatformInput
                 {
                     m_AlwaysUseVirtual.Add(axis.name);
                 }
-            }
+            //}
         }
 
 

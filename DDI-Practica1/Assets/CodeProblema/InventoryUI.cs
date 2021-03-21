@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityStandardAssets.CrossPlatformInput;
 
 public class InventoryUI : MonoBehaviour
 {
     private Inventory _inventory;
     public GameObject gameUI;
     public GameObject panel;
+    public KeyCode activationKey = KeyCode.I;
+    public string inventoryButton = "InventoryButton";
+    public int actualTime = 1;
 
     void Start()
     {
@@ -16,8 +20,19 @@ public class InventoryUI : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.I))
+        if(CrossPlatformInputManager.GetButtonDown(inventoryButton))
         {
+            //Manejo de tiempo???
+            if(actualTime == 1)
+            {
+                Time.timeScale = 0;
+                actualTime = 0;
+            }
+            else
+            {
+                Time.timeScale = 1;
+                actualTime = 1;
+            }
             panel.SetActive(!panel.activeSelf);
             gameUI.SetActive(!gameUI.activeSelf);
             UpdateUI();
@@ -56,7 +71,7 @@ public class InventoryUI : MonoBehaviour
             }*/
         //}
 
-        for(int i = 1; i < slots.Length; i++)
+        for(int i = 2; i < slots.Length; i++)
             if(i >= _inventory.items.Count)
                 slots[i].Clear();
     }
