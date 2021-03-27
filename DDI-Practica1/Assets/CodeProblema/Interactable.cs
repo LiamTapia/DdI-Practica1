@@ -35,6 +35,11 @@ public class Interactable : MonoBehaviour
         return;
     }
 
+    void OnMouseDown()
+    {
+        Interact();
+    }
+
     private void OnTriggerExit(Collider other) 
     {
         if(other.CompareTag("Player"))

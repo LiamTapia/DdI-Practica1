@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="qcar_config.xsd">
+  <Tracking>
+    <ImageTarget name="wooper" size="0.200000 0.201391" />
+    <ImageTarget name="zora" size="0.200000 0.294737" />
+    <ImageTarget name="deku" size="0.200000 0.288889" />
+    <ImageTarget name="darmani" size="0.200000 0.292184" />
+    <ImageTarget name="tingle" size="0.200000 0.293360" />
+    <ImageTarget name="ben" size="0.200000 0.292800" />
+    <ImageTarget name="DocJorge" size="0.200000 0.191781" />
+    <ImageTarget name="cryJorge" size="0.200000 0.194545" />
+    <ImageTarget name="NormalJorge" size="0.200000 0.197025" />
+  </Tracking>
+</QCARConfig>
